@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Neon Periodic Table</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Neon Periodic Table</h1>
+    <div class="controls">
+      <input id="search-box" placeholder="Search by name or symbol..." />
+      <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="alkali metal">Alkali Metals</option>
+        <option value="alkaline earth metal">Alkaline Earth</option>
+        <option value="lanthanide">Lanthanides</option>
+        <option value="actinide">Actinides</option>
+        <option value="transition metal">Transition Metals</option>
+        <option value="post-transition metal">Post-transition Metals</option>
+        <option value="metalloid">Metalloids</option>
+        <option value="nonmetal">Nonmetals</option>
+        <option value="halogen">Halogens</option>
+        <option value="noble gas">Noble Gases</option>
+      </select>
+      <button id="random-btn">Random Element of the Day</button>
+    </div>
+    <div id="random-card" class="random-card" hidden>
+      <h3 id="rand-name"></h3>
+      <p id="rand-fun"></p>
+      <button id="rand-close">Close</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="periodic-table" class="periodic-table" aria-hidden="false"></div>
+    <div id="detail-card" class="detail-card" hidden>
+      <button id="close-detail">✕</button>
+      <h2 id="detail-name"></h2>
+      <p><strong>Symbol:</strong> <span id="detail-symbol"></span></p>
+      <p><strong>Atomic Number:</strong> <span id="detail-number"></span></p>
+      <p><strong>Atomic Mass:</strong> <span id="detail-mass"></span></p>
+      <p><strong>Category:</strong> <span id="detail-category"></span></p>
+      <p><strong>State:</strong> <span id="detail-state"></span></p>
+      <p id="detail-fun"></p>
+    </div>
+  </main>
+
+<script src="elements-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
